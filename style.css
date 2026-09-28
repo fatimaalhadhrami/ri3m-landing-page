@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #F5F4F0;
+    color: #000;
+}
+
+
+/* Navigation */
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 6%;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a,
+.socials a {
+    color: #000;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 120px 20px 80px;
+
+    background: #8D1818;
+    color: #F5F4F0;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.small-text {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(70px, 13vw, 170px);
+    line-height: 0.85;
+    letter-spacing: -5px;
+}
+
+.tagline {
+    font-size: 24px;
+    margin-top: 25px;
+}
+
+
+/* Countdown */
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+
+    margin: 50px 0;
+}
+
+.countdown div {
+    display: flex;
+    flex-direction: column;
+}
+
+.countdown span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.countdown small {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+
+/* Button */
+
+.button {
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    background: #F5F4F0;
+    color: #000;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.button:hover {
+    background: #000;
+    color: #F5F4F0;
+}
+
+
+/* Drops */
+
+.drops {
+    padding: 120px 6%;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: clamp(50px, 8vw, 100px);
+    line-height: 0.9;
+}
+
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-image {
+    height: 450px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+.product-image span {
+    font-size: 100px;
+    font-weight: 900;
+    color: #8D1818;
+}
+
+.product-info {
+    padding: 20px 0;
+}
+
+.product-info h3 {
+    font-size: 16px;
+}
+
+.product-info p {
+    font-size: 11px;
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
+
+/* About */
+
+.about {
+    background: #000;
+    color: #F5F4F0;
+
+    padding: 120px 6%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+    align-items: center;
+}
+
+.about h2 {
+    font-size: clamp(60px, 9vw, 120px);
+    line-height: 0.85;
+}
+
+.about > p {
+    max-width: 450px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+
+/* Signup */
+
+.signup {
+    text-align: center;
+
+    padding: 120px 20px;
+}
+
+.signup h2 {
+    font-size: clamp(60px, 10vw, 130px);
+    line-height: 0.9;
+    margin-bottom: 25px;
+}
+
+.signup > p {
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+form {
+    display: flex;
+    max-width: 550px;
+    margin: auto;
+}
+
+input {
+    flex: 1;
+
+    padding: 18px;
+
+    border: 2px solid #000;
+
+    background: transparent;
+
+    font-size: 12px;
+}
+
+button {
+    padding: 18px 25px;
+
+    border: 2px solid #000;
+
+    background: #000;
+    color: #F5F4F0;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    background: #8D1818;
+    color: #F5F4F0;
+
+    padding: 50px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socials a {
+    color: #F5F4F0;
+}
+
+footer p {
+    font-size: 10px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .countdown {
+        gap: 20px;
+    }
+
+    .countdown span {
+        font-size: 28px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 400px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about > p {
+        font-size: 18px;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
