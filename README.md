@@ -1,5 +1,7 @@
 # RI3M — Streetwear Coming Soon Landing Page
 
+![RI3M Landing Page](ri3m-preview.png)
+
 A modern coming-soon landing page concept designed for a fictional streetwear and athletic-wear brand.
 
 ## Overview
