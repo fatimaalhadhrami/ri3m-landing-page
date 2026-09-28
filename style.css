@@ -1,3 +1,7 @@
+/* ===============================
+   RESET
+================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,362 +13,507 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: #F5F4F0;
-    color: #000;
+    color: #111;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
 }
 
 
-/* Navigation */
+/* ===============================
+   NAVBAR
+================================ */
 
-header {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-}
-
-.navbar {
+nav {
+    height: 80px;
+    padding: 0 6%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
-    padding: 25px 6%;
+    justify-content: space-between;
+    background: #F5F4F0;
+    border-bottom: 1px solid #111;
 }
 
 .logo {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 900;
-    letter-spacing: 3px;
+    letter-spacing: -1px;
 }
 
-.nav-links {
+nav ul {
+    list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 35px;
 }
 
-.nav-links a,
-.socials a {
-    color: #000;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
+nav ul li a {
+    font-size: 13px;
+    font-weight: 700;
     letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+nav ul li a:hover {
+    opacity: 0.5;
 }
 
 
-/* Hero */
+/* ===============================
+   HERO
+================================ */
 
 .hero {
-    min-height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 120px 20px 80px;
-
+    min-height: 88vh;
     background: #8D1818;
     color: #F5F4F0;
+    display: flex;
+    align-items: center;
+    padding: 100px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "RI3M";
+    position: absolute;
+    right: -40px;
+    bottom: -80px;
+    font-size: 22vw;
+    font-weight: 900;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.08);
+    pointer-events: none;
 }
 
 .hero-content {
-    max-width: 900px;
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
 }
 
 .small-text {
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 28px;
 }
 
 .hero h1 {
-    font-size: clamp(70px, 13vw, 170px);
-    line-height: 0.85;
-    letter-spacing: -5px;
+    font-size: clamp(70px, 11vw, 170px);
+    line-height: 0.82;
+    font-weight: 900;
+    letter-spacing: -6px;
+    text-transform: uppercase;
 }
 
 .tagline {
-    font-size: 24px;
-    margin-top: 25px;
+    margin-top: 35px;
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 
-/* Countdown */
+/* ===============================
+   COUNTDOWN
+================================ */
 
 .countdown {
     display: flex;
-    justify-content: center;
-    gap: 45px;
-
-    margin: 50px 0;
+    gap: 12px;
+    margin-top: 55px;
 }
 
 .countdown div {
-    display: flex;
-    flex-direction: column;
+    min-width: 105px;
+    padding: 18px 20px;
+    border: 1px solid rgba(245, 244, 240, 0.5);
+    text-align: center;
 }
 
 .countdown span {
-    font-size: 40px;
-    font-weight: bold;
+    display: block;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
 }
 
 .countdown small {
-    font-size: 9px;
+    display: block;
+    margin-top: 8px;
+    font-size: 10px;
     letter-spacing: 2px;
-    margin-top: 5px;
 }
 
 
-/* Button */
+/* ===============================
+   BUTTON
+================================ */
 
 .button {
     display: inline-block;
-
-    padding: 16px 30px;
-
+    margin-top: 40px;
+    padding: 17px 30px;
     background: #F5F4F0;
-    color: #000;
-
-    text-decoration: none;
-
-    font-size: 12px;
-    font-weight: bold;
+    color: #111;
+    font-size: 13px;
+    font-weight: 800;
     letter-spacing: 2px;
+    transition: all 0.3s ease;
 }
 
 .button:hover {
-    background: #000;
+    background: #111;
     color: #F5F4F0;
+    transform: translateY(-3px);
 }
 
 
-/* Drops */
+/* ===============================
+   DROPS
+================================ */
 
-.drops {
-    padding: 120px 6%;
+#drops {
+    padding: 110px 6%;
 }
 
-.section-title {
-    margin-bottom: 60px;
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #111;
+    padding-bottom: 20px;
 }
 
-.section-title p {
-    font-size: 11px;
-    letter-spacing: 3px;
-    font-weight: bold;
-}
-
-.section-title h2 {
-    font-size: clamp(50px, 8vw, 100px);
+.section-header h2 {
+    font-size: clamp(45px, 7vw, 90px);
     line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -3px;
 }
 
+.section-header p {
+    max-width: 300px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-.products {
+.drops-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-.product-image {
-    height: 450px;
+.product-card {
+    background: #fff;
     overflow: hidden;
-    background: #ddd;
+}
+
+.product-image {
+    height: 520px;
+    overflow: hidden;
+    background: #e9e7e2;
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
 }
 
 .product-card:hover .product-image img {
-    transform: scale(1.04);
+    transform: scale(1.03);
 }
-.product-image span {
-    font-size: 100px;
-    font-weight: 900;
-    color: #8D1818;
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
 }
 
 .product-info {
-    padding: 20px 0;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-top: none;
 }
 
 .product-info h3 {
-    font-size: 16px;
-}
-
-.product-info p {
-    font-size: 11px;
-    margin-top: 8px;
+    font-size: 15px;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
+.product-info p {
+    font-size: 13px;
+    font-weight: 700;
+}
 
-/* About */
 
-.about {
-    background: #000;
+/* ===============================
+   ABOUT
+================================ */
+
+#about {
+    background: #111;
     color: #F5F4F0;
-
-    padding: 120px 6%;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-
-    align-items: center;
+    padding: 120px 8%;
 }
 
-.about h2 {
-    font-size: clamp(60px, 9vw, 120px);
-    line-height: 0.85;
+.about-content {
+    max-width: 900px;
 }
 
-.about > p {
-    max-width: 450px;
-    font-size: 22px;
-    line-height: 1.5;
-}
-
-
-/* Signup */
-
-.signup {
-    text-align: center;
-
-    padding: 120px 20px;
-}
-
-.signup h2 {
-    font-size: clamp(60px, 10vw, 130px);
+#about h2 {
+    font-size: clamp(50px, 8vw, 110px);
     line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+    margin-bottom: 45px;
+}
+
+#about p {
+    max-width: 650px;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+
+/* ===============================
+   SIGNUP
+================================ */
+
+#signup {
+    padding: 120px 8%;
+    background: #F5F4F0;
+}
+
+.signup-content {
+    max-width: 850px;
+}
+
+#signup h2 {
+    font-size: clamp(50px, 8vw, 100px);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -4px;
     margin-bottom: 25px;
 }
 
-.signup > p {
+#signup p {
+    font-size: 17px;
+    margin-bottom: 35px;
     max-width: 500px;
-    margin: 0 auto 30px;
 }
 
-form {
+#signup-form {
     display: flex;
-    max-width: 550px;
-    margin: auto;
+    max-width: 650px;
 }
 
-input {
+#signup-form input {
     flex: 1;
-
     padding: 18px;
-
-    border: 2px solid #000;
-
+    border: 1px solid #111;
     background: transparent;
-
-    font-size: 12px;
+    font-size: 15px;
+    outline: none;
 }
 
-button {
-    padding: 18px 25px;
-
-    border: 2px solid #000;
-
-    background: #000;
+#signup-form button {
+    padding: 18px 30px;
+    border: 1px solid #111;
+    background: #111;
     color: #F5F4F0;
-
-    font-weight: bold;
-
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
     cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#signup-form button:hover {
+    background: #8D1818;
+    border-color: #8D1818;
 }
 
 #message {
-    margin-top: 20px;
-    font-weight: bold;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 
-/* Footer */
+/* ===============================
+   FOOTER
+================================ */
 
 footer {
     background: #8D1818;
     color: #F5F4F0;
+    padding: 60px 6%;
+}
 
-    padding: 50px 6%;
-
+.footer-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
-    gap: 20px;
+    align-items: center;
 }
 
-.socials {
+.footer-logo {
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.social-links {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
-.socials a {
-    color: #F5F4F0;
+.social-links a {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
 }
 
 footer p {
-    font-size: 10px;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(245, 244, 240, 0.3);
+    font-size: 11px;
+    letter-spacing: 1px;
 }
 
 
-/* Responsive */
+/* ===============================
+   MOBILE
+================================ */
 
 @media (max-width: 768px) {
 
-    .nav-links {
-        display: none;
-    }
-
-    .hero h1 {
-        letter-spacing: -3px;
-    }
-
-    .countdown {
+    nav {
+        height: auto;
+        padding: 20px 6%;
+        align-items: flex-start;
         gap: 20px;
     }
 
-    .countdown span {
-        font-size: 28px;
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
     }
 
-    .products {
+    nav ul li a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 90vh;
+        padding: 80px 6%;
+    }
+
+    .hero h1 {
+        font-size: clamp(60px, 17vw, 110px);
+        letter-spacing: -4px;
+    }
+
+    .tagline {
+        font-size: 17px;
+    }
+
+    .countdown {
+        gap: 7px;
+        margin-top: 40px;
+    }
+
+    .countdown div {
+        min-width: 70px;
+        padding: 14px 8px;
+    }
+
+    .countdown span {
+        font-size: 25px;
+    }
+
+    .countdown small {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .button {
+        margin-top: 30px;
+    }
+
+    #drops,
+    #about,
+    #signup {
+        padding: 80px 6%;
+    }
+
+    .section-header {
+        display: block;
+    }
+
+    .section-header h2 {
+        margin-bottom: 25px;
+    }
+
+    .drops-grid {
         grid-template-columns: 1fr;
     }
 
     .product-image {
-        height: 400px;
+        height: 500px;
     }
 
-    .about {
-        grid-template-columns: 1fr;
+    #about h2,
+    #signup h2 {
+        letter-spacing: -2px;
     }
 
-    .about > p {
-        font-size: 18px;
+    #about p {
+        font-size: 17px;
     }
 
-    form {
+    #signup-form {
         flex-direction: column;
-        gap: 10px;
     }
 
-    footer {
+    #signup-form input,
+    #signup-form button {
+        width: 100%;
+    }
+
+    .footer-content {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
+        gap: 30px;
     }
 
+    .social-links {
+        flex-wrap: wrap;
+    }
 }
